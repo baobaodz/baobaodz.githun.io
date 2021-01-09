@@ -1,0 +1,9 @@
+.navbar {
+	background-color: transparent;
+    font-size: 0.875rem;
+	box-shadow: 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px 0 rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0px 0 rgba(0,0,0,0);
+}
+.navbar .dropdown-collapse, .top-nav-collapse, .navbar-col-show {
+    background-color: var(--navbar-bg-color);
+}
