@@ -29,7 +29,7 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/atom-one-dark.min.css" />
     
   
 
@@ -60,7 +60,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"🍦","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -146,7 +146,7 @@
                   
                   
                   
-                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/">
+                  <a class="dropdown-item" href="/project/">
                     <i class="iconfont icon-daima"></i>
                     个人项目
                   </a>
@@ -220,7 +220,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      1.3k 字
     </span>
   
 
@@ -230,7 +230,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      21
+      20
        分钟
     </span>
   
@@ -265,12 +265,11 @@
             <div class="markdown-body">
               <p>总结一些在日常工作中用到的处理文件和目录的linux命令</p>
 <a id="more"></a>
-<h3 id="一、目录操作"><a href="#一、目录操作" class="headerlink" title="一、目录操作"></a>一、目录操作</h3><h4 id="pwd-当前所在目录"><a href="#pwd-当前所在目录" class="headerlink" title="pwd 当前所在目录"></a>pwd 当前所在目录</h4><pre><code>[root@izuf66fm097gavs15ngjfvz home]# pwd
-/home</code></pre>
+<h3 id="一、目录操作"><a href="#一、目录操作" class="headerlink" title="一、目录操作"></a>一、目录操作</h3><h4 id="pwd-当前所在目录"><a href="#pwd-当前所在目录" class="headerlink" title="pwd 当前所在目录"></a>pwd 当前所在目录</h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz home]# pwd<br>/home<br></code></pre></div></td></tr></table></figure>
 <h4 id="ls-列出目录内容"><a href="#ls-列出目录内容" class="headerlink" title="ls 列出目录内容"></a>ls 列出目录内容</h4><ul>
-<li><p>  英文原意：list</p>
+<li><p>英文原意：list</p>
 </li>
-<li><p>  常用选项：</p>
+<li><p>常用选项：</p>
 </li>
 <li><ul>
 <li><p>-l ：详细信息显示</p>
@@ -279,97 +278,32 @@
 <li>  -h：将文件容量以较易读的方式（GB，kB等）列出来</li>
 </ul>
 <p>另外，这些参数可以组合使用，例如<code>ls -la</code>，显示当前目录所有文件的详细信息</p>
-<pre>[root@izuf66fm097gavs15ngjfvz home]# ls
-oracle  swap
-[root@izuf66fm097gavs15ngjfvz home]# ls -a
-.  ..  oracle  swap
-[root@izuf66fm097gavs15ngjfvz home]# ls -la
-total 2097168
-drwxr-xr-x.  3 root   root           4096 Apr 11  2018 .
-dr-xr-xr-x. 19 root   root           4096 Sep  7 21:14 ..
-drwx------   3 oracle oinstall       4096 Nov 14  2018 oracle
--rw-r--r--   1 root   root     2147483648 Oct  9  2018 swap
-[root@izuf66fm097gavs15ngjfvz home]# ls -lah
-total 2.1G
-drwxr-xr-x.  3 root   root     4.0K Apr 11  2018 .
-dr-xr-xr-x. 19 root   root     4.0K Sep  7 21:14 ..
-drwx------   3 oracle oinstall 4.0K Nov 14  2018 oracle
--rw-r--r--   1 root   root     2.0G Oct  9  2018 swap
+<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">    [root@izuf66fm097gavs15ngjfvz home]# ls<br>    oracle  swap<br>    [root@izuf66fm097gavs15ngjfvz home]# ls -a<br>    .  ..  oracle  swap<br>    [root@izuf66fm097gavs15ngjfvz home]# ls -la<br>    total 2097168<br>    drwxr-xr-x.  3 root   root           4096 Apr 11  2018 .<br>    dr-xr-xr-x. 19 root   root           4096 Sep  7 21:14 ..<br>    drwx------   3 oracle oinstall       4096 Nov 14  2018 oracle<br>    -rw-r--r--   1 root   root     2147483648 Oct  9  2018 swap<br>    [root@izuf66fm097gavs15ngjfvz home]# ls -lah<br>    total 2.1G<br>    drwxr-xr-x.  3 root   root     4.0K Apr 11  2018 .<br>    dr-xr-xr-x. 19 root   root     4.0K Sep  7 21:14 ..<br>    drwx------   3 oracle oinstall 4.0K Nov 14  2018 oracle<br>-rw-r--r--   1 root   root     2.0G Oct  9  2018 swap<br></code></pre></div></td></tr></table></figure>
 
-</pre>
-
+<p></pre></p>
 </li>
 </ul>
 </li>
 </ul>
 <h4 id="cd-切换目录"><a href="#cd-切换目录" class="headerlink" title="cd 切换目录"></a><strong>cd</strong> 切换目录</h4><ul>
-<li>  英文原意：change directory</li>
-<li>cd oracle     //进入指定目录,相当于<br>  cd ./oracle   // 切换到当前目录下的shi目录中，“.”表示当前目录<br>  cd ..         //  回到上级目录<br>  cd -          // 返回进入此目录之前的目录  <pre>[root@izuf66fm097gavs15ngjfvz home]# ls
-  oracle  swap
-  [root@izuf66fm097gavs15ngjfvz home]# cd oracle
-  [root@izuf66fm097gavs15ngjfvz oracle]# ls
-  oradiag_oracle
-  [root@izuf66fm097gavs15ngjfvz oracle]# cd ..
-  [root@izuf66fm097gavs15ngjfvz home]# cd ./oracle
-  [root@izuf66fm097gavs15ngjfvz oracle]# ls
-  oradiag_oracle
-  [root@izuf66fm097gavs15ngjfvz oracle]# cd -
-  /home
-  [root@izuf66fm097gavs15ngjfvz home]# ls
-  oracle  swap
-  [root@izuf66fm097gavs15ngjfvz home]# 
-  </pre>
+<li><p>英文原意：change directory</p>
+</li>
+<li><p>cd oracle     //进入指定目录,相当于<br>  cd ./oracle   // 切换到当前目录下的shi目录中，“.”表示当前目录<br>  cd ..         //  回到上级目录<br>  cd -          // 返回进入此目录之前的目录</p>
+  <figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz home]# ls<br>oracle  swap<br>[root@izuf66fm097gavs15ngjfvz home]# cd oracle<br>[root@izuf66fm097gavs15ngjfvz oracle]# ls<br>oradiag_oracle<br>[root@izuf66fm097gavs15ngjfvz oracle]# cd ..<br>[root@izuf66fm097gavs15ngjfvz home]# cd ./oracle<br>[root@izuf66fm097gavs15ngjfvz oracle]# ls<br>oradiag_oracle<br>[root@izuf66fm097gavs15ngjfvz oracle]# cd -<br>/home<br>[root@izuf66fm097gavs15ngjfvz home]# ls<br>oracle  swap<br>[root@izuf66fm097gavs15ngjfvz home]# <br></code></pre></div></td></tr></table></figure>
+
+
 
 </li>
 </ul>
-<h4 id="mkdir-新建目录"><a href="#mkdir-新建目录" class="headerlink" title="mkdir 新建目录"></a><strong>mkdir 新建目录</strong></h4><pre><code>&lt;pre&gt;root@izuf66fm097gavs15ngjfvz /]# cd home
-[root@izuf66fm097gavs15ngjfvz home]# ls
-oracle  swap
-[root@izuf66fm097gavs15ngjfvz home]# mkdir mysql
-[root@izuf66fm097gavs15ngjfvz home]# ls
-mysql  oracle  swap
-&lt;/pre&gt;</code></pre>
-<h4 id="rmdir-删除空目录"><a href="#rmdir-删除空目录" class="headerlink" title="rmdir 删除空目录"></a><strong>rmdir 删除空目录</strong></h4><pre><code>如目录不为空，删除不了，需要使用`rm -rf 目录名`才能强制删除非空目录。
-
-&lt;pre&gt;[root@izuf66fm097gavs15ngjfvz home]# ls
-oracle  swap
-[root@izuf66fm097gavs15ngjfvz home]# mkdir mysql
-[root@izuf66fm097gavs15ngjfvz home]# ls
-mysql  oracle  swap
-[root@izuf66fm097gavs15ngjfvz home]# cd mysql
-[root@izuf66fm097gavs15ngjfvz mysql]# touch readme.md
-[root@izuf66fm097gavs15ngjfvz mysql]# cd ../
-[root@izuf66fm097gavs15ngjfvz home]# rmdir mysql
-rmdir: failed to remove ‘mysql’: Directory not empty
-[root@izuf66fm097gavs15ngjfvz home]# rm -rf mysql
-[root@izuf66fm097gavs15ngjfvz home]# ls
-oracle  swap
-[root@izuf66fm097gavs15ngjfvz home]#
-&lt;/pre&gt;</code></pre>
+<h4 id="mkdir-新建目录"><a href="#mkdir-新建目录" class="headerlink" title="mkdir 新建目录"></a><strong>mkdir 新建目录</strong></h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">root@izuf66fm097gavs15ngjfvz /]# cd home<br>[root@izuf66fm097gavs15ngjfvz home]# ls<br>oracle  swap<br>[root@izuf66fm097gavs15ngjfvz home]# mkdir mysql<br>[root@izuf66fm097gavs15ngjfvz home]# ls<br>mysql  oracle  swap<br></code></pre></div></td></tr></table></figure>
+<h4 id="rmdir-删除空目录"><a href="#rmdir-删除空目录" class="headerlink" title="rmdir 删除空目录"></a><strong>rmdir 删除空目录</strong></h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">如目录不为空，删除不了，需要使用`rm -rf 目录名`才能强制删除非空目录。<br><br>[root@izuf66fm097gavs15ngjfvz home]# ls<br>oracle  swap<br>[root@izuf66fm097gavs15ngjfvz home]# mkdir mysql<br>[root@izuf66fm097gavs15ngjfvz home]# ls<br>mysql  oracle  swap<br>[root@izuf66fm097gavs15ngjfvz home]# cd mysql<br>[root@izuf66fm097gavs15ngjfvz mysql]# touch readme.md<br>[root@izuf66fm097gavs15ngjfvz mysql]# cd ../<br>[root@izuf66fm097gavs15ngjfvz home]# rmdir mysql<br>rmdir: failed to remove ‘mysql’: Directory not empty<br>[root@izuf66fm097gavs15ngjfvz home]# rm -rf mysql<br>[root@izuf66fm097gavs15ngjfvz home]# ls<br>oracle  swap<br>[root@izuf66fm097gavs15ngjfvz home]#<br></code></pre></div></td></tr></table></figure>
 <h3 id="二、文件操作"><a href="#二、文件操作" class="headerlink" title="二、文件操作"></a>二、文件操作</h3><h4 id="touch-新建文件"><a href="#touch-新建文件" class="headerlink" title="touch 新建文件"></a><strong>touch 新建文件</strong></h4><p>如果一个文件名参数是一个不存在的文件，则会创建一个空文件。</p>
 <p>如果存在则会更新文件访问时间。并不会对文件内容做出改变。</p>
-<pre><code>&lt;pre&gt;touch test.java    // 如果文件不存在，就创建test.java
-&lt;/pre&gt;
-
-example:
-
-&lt;pre&gt;[root@izuf66fm097gavs15ngjfvz home]# touch test.java
-[root@izuf66fm097gavs15ngjfvz home]# ls -l
-total 2097160
-drwx------ 3 oracle oinstall       4096 Nov 14  2018 oracle
--rw-r--r-- 1 root   root     2147483648 Oct  9  2018 swap
--rw-r--r-- 1 root   root              0 Oct 11 23:33 test.java
-[root@izuf66fm097gavs15ngjfvz home]# touch test.java
-[root@izuf66fm097gavs15ngjfvz home]# ls -l
-total 2097160
-drwx------ 3 oracle oinstall       4096 Nov 14  2018 oracle
--rw-r--r-- 1 root   root     2147483648 Oct  9  2018 swap
--rw-r--r-- 1 root   root              0 Oct 11 23:34 test.java
-&lt;/pre&gt;</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">touch test.java    // 如果文件不存在，就创建test.java<br><br>example:<br><br>[root@izuf66fm097gavs15ngjfvz home]# touch test.java<br>[root@izuf66fm097gavs15ngjfvz home]# ls -l<br>total 2097160<br>drwx------ 3 oracle oinstall       4096 Nov 14  2018 oracle<br>-rw-r--r-- 1 root   root     2147483648 Oct  9  2018 swap<br>-rw-r--r-- 1 root   root              0 Oct 11 23:33 test.java<br>[root@izuf66fm097gavs15ngjfvz home]# touch test.java<br>[root@izuf66fm097gavs15ngjfvz home]# ls -l<br>total 2097160<br>drwx------ 3 oracle oinstall       4096 Nov 14  2018 oracle<br>-rw-r--r-- 1 root   root     2147483648 Oct  9  2018 swap<br>-rw-r--r-- 1 root   root              0 Oct 11 23:34 test.java<br></code></pre></div></td></tr></table></figure>
 <h4 id="mv-移动和重命名文件"><a href="#mv-移动和重命名文件" class="headerlink" title="mv 移动和重命名文件"></a><strong>mv 移动和重命名文件</strong></h4><ul>
-<li><p>  英文原意：move</p>
+<li><p>英文原意：move</p>
 </li>
-<li><p>  常用选项：</p>
+<li><p>常用选项：</p>
 </li>
 <li><ul>
 <li><p>-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖</p>
@@ -380,62 +314,21 @@ drwx------ 3 oracle oinstall       4096 Nov 14  2018 oracle
 <p><strong>mv file1 file2 file3 dir   // 把文件file1、file2、file3移动到当前目录dir中</strong></p>
 <p><strong>mv file1 file2 file3 ../dir   // 把文件file1、file2、file3移动到当上级目录dir中</strong></p>
 <p><strong>mv file1 file2  // 把文件file1重命名为file2</strong></p>
-<pre>[root@izuf66fm097gavs15ngjfvz home]# ls
-oracle  swap  test.java
-[root@izuf66fm097gavs15ngjfvz home]# mv test.java oracle 
-[root@izuf66fm097gavs15ngjfvz home]# ls
-oracle  swap
-[root@izuf66fm097gavs15ngjfvz home]# cd oracle
-[root@izuf66fm097gavs15ngjfvz oracle]# ls
-oradiag_oracle  test.java
-[root@izuf66fm097gavs15ngjfvz oracle]# mv test.java HelloWorld.java
-[root@izuf66fm097gavs15ngjfvz oracle]# ls
-HelloWorld.java  oradiag_oracle
-</pre>
+<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz home]# ls<br>oracle  swap  test.java<br>[root@izuf66fm097gavs15ngjfvz home]# mv test.java oracle <br>[root@izuf66fm097gavs15ngjfvz home]# ls<br>oracle  swap<br>[root@izuf66fm097gavs15ngjfvz home]# cd oracle<br>[root@izuf66fm097gavs15ngjfvz oracle]# ls<br>oradiag_oracle  test.java<br>[root@izuf66fm097gavs15ngjfvz oracle]# mv test.java HelloWorld.java<br>[root@izuf66fm097gavs15ngjfvz oracle]# ls<br>HelloWorld.java  oradiag_oracle<br></code></pre></div></td></tr></table></figure>
+
+
 
 </li>
 </ul>
 </li>
 </ul>
-<h4 id="ls-l-查看文件权限"><a href="#ls-l-查看文件权限" class="headerlink" title="ls -l 查看文件权限"></a>ls -l 查看文件权限</h4><h4 id="chmod-修改权限"><a href="#chmod-修改权限" class="headerlink" title="chmod 修改权限"></a>chmod 修改权限</h4><pre><code>&lt;pre&gt;[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l HelloWorld.java 
--rw-r--r-- 1 root root 0 Oct 13 15:20 HelloWorld.java
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# chmod 777 HelloWorld.java 
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l HelloWorld.java 
--rwxrwxrwx 1 root root 0 Oct 13 15:20 HelloWorld.java
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# chmod 666 HelloWorld.java 
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l
-total 0
--rw-rw-rw- 1 root root 0 Oct 13 15:20 HelloWorld.java
-&lt;/pre&gt;</code></pre>
+<h4 id="ls-l-查看文件权限"><a href="#ls-l-查看文件权限" class="headerlink" title="ls -l 查看文件权限"></a>ls -l 查看文件权限</h4><h4 id="chmod-修改权限"><a href="#chmod-修改权限" class="headerlink" title="chmod 修改权限"></a>chmod 修改权限</h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l HelloWorld.java <br>-rw-r--r-- 1 root root 0 Oct 13 15:20 HelloWorld.java<br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# chmod 777 HelloWorld.java <br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l HelloWorld.java <br>-rwxrwxrwx 1 root root 0 Oct 13 15:20 HelloWorld.java<br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# chmod 666 HelloWorld.java <br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l<br>total 0<br>-rw-rw-rw- 1 root root 0 Oct 13 15:20 HelloWorld.java<br><br></code></pre></div></td></tr></table></figure>
 <p>r表示读取（read）权限，w表示写入（write）权限，x表示执行（eXecute）权限，通常具体的权限由数字来表示：r=4，w=2，x=1</p>
 <p>若要rwx属性则4+2+1=7；</p>
 <p>若要rw-属性则4+2=6；</p>
 <p>若要r-x属性则4+1=7。</p>
 <p>常用修改权限的命令：</p>
-<pre><code>&lt;pre&gt;sudo chmod 600 ××× （只有所有者有读和写的权限）
-
-sudo chmod 644 ××× （所有者有读和写的权限，组用户只有读的权限）
-
-sudo chmod 700 ××× （只有所有者有读和写以及执行的权限）
-
-sudo chmod 666 ××× （每个人都有读和写的权限）
-
-sudo chmod 777 ××× （每个人都有读和写以及执行的权限）
-&lt;/pre&gt;
-
-若要修改目录下所有文件的权限:chmod -R 权限 目录
-
-&lt;pre&gt;`[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l
-total 0
--rw-r--r-- 1 root root 0 Oct 13 15:32 app.java
--rw-rw-rw- 1 root root 0 Oct 13 15:20 HelloWorld.java
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# chmod -R 777 ../HelloWorld
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# 
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l
-total 0
--rwxrwxrwx 1 root root 0 Oct 13 15:32 app.java
--rwxrwxrwx 1 root root 0 Oct 13 15:20 HelloWorld.java
-`&lt;/pre&gt;</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">sudo chmod 600 ××× （只有所有者有读和写的权限）<br><br>sudo chmod 644 ××× （所有者有读和写的权限，组用户只有读的权限）<br><br>sudo chmod 700 ××× （只有所有者有读和写以及执行的权限）<br><br>sudo chmod 666 ××× （每个人都有读和写的权限）<br><br>sudo chmod 777 ××× （每个人都有读和写以及执行的权限）<br><br>若要修改目录下所有文件的权限:chmod -R 权限 目录<br><br>`[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l<br>total 0<br>-rw-r--r-- 1 root root 0 Oct 13 15:32 app.java<br>-rw-rw-rw- 1 root root 0 Oct 13 15:20 HelloWorld.java<br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# chmod -R 777 ../HelloWorld<br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# <br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls -l<br>total 0<br>-rwxrwxrwx 1 root root 0 Oct 13 15:32 app.java<br>-rwxrwxrwx 1 root root 0 Oct 13 15:20 HelloWorld.java<br>`<br></code></pre></div></td></tr></table></figure>
 <h4 id="rm-删除文件或目录"><a href="#rm-删除文件或目录" class="headerlink" title="rm 删除文件或目录"></a>rm 删除文件或目录</h4><ul>
 <li>  常用选项：</li>
 <li><ul>
@@ -447,22 +340,10 @@ total 0
 </ul>
 </li>
 </ul>
-<h4 id="cat-查看文件内容"><a href="#cat-查看文件内容" class="headerlink" title="cat 查看文件内容"></a>cat 查看文件内容</h4><pre><code>&lt;pre&gt;[root@izuf66fm097gavs15ngjfvz HelloWorld]# vi HelloWorld.java 
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# cat HelloWorld.java 
-import test.package;
-&lt;/pre&gt;</code></pre>
+<h4 id="cat-查看文件内容"><a href="#cat-查看文件内容" class="headerlink" title="cat 查看文件内容"></a>cat 查看文件内容</h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz HelloWorld]# vi HelloWorld.java <br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# cat HelloWorld.java <br>import test.package;<br></code></pre></div></td></tr></table></figure>
+
 <p>​    </p>
-<h4 id="find-查找文件"><a href="#find-查找文件" class="headerlink" title="find 查找文件"></a>find 查找文件</h4><pre><code>&lt;pre&gt;[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls
-appConfiguration.java  app.java  HelloWorld.java
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# find app.java
-app.java
-[root@izuf66fm097gavs15ngjfvz HelloWorld]# find app*.java
-appConfiguration.java
-app.java
-[root@izuf66fm097gavs15ngjfvz home]# find oracle/HelloWorld/ -name &amp;quot;*.java&amp;quot;
-oracle/HelloWorld/appConfiguration.java
-oracle/HelloWorld/HelloWorld.java
-oracle/HelloWorld/app.java</code></pre>
+<h4 id="find-查找文件"><a href="#find-查找文件" class="headerlink" title="find 查找文件"></a>find 查找文件</h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz HelloWorld]# ls<br>appConfiguration.java  app.java  HelloWorld.java<br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# find app.java<br>app.java<br>[root@izuf66fm097gavs15ngjfvz HelloWorld]# find app*.java<br>appConfiguration.java<br>app.java<br>[root@izuf66fm097gavs15ngjfvz home]# find oracle/HelloWorld/ -name &amp;quot;*.java&amp;quot;<br>oracle/HelloWorld/appConfiguration.java<br>oracle/HelloWorld/HelloWorld.java<br>oracle/HelloWorld/app.java<br></code></pre></div></td></tr></table></figure>
 <h4 id="vi-编辑文件"><a href="#vi-编辑文件" class="headerlink" title="vi 编辑文件"></a>vi 编辑文件</h4><p>依次输入vi进入编辑页面，i进入insert状态，Esc退出编辑模式，输入:wq保存退出</p>
 
             </div>
