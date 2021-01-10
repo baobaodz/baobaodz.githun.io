@@ -15,9 +15,9 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="baobaodz">
   <meta name="keywords" content="">
-  <title>multiple parameters with no annotation. Unable to resolve the injection source - Hexo</title>
+  <title>multiple parameters with no annotation. Unable to resolve the injection source - Baobaodz</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -264,7 +264,7 @@
             
             <div class="markdown-body">
               <p>在dropwizard中resource中想通过POST方法增加书籍，接收两个参数报错：</p>
-<pre><code>package com.baobaodz.example.dropwizard.resources;
+<div class="hljs code-wrapper"><pre><code>package com.baobaodz.example.dropwizard.resources;
 
 import com.baobaodz.example.dropwizard.api.Book;
 
@@ -292,11 +292,11 @@ public class HolaRestResource &#123;
         newBook.setPublishDate(book.getPublishDate());
         return newBook;
     &#125;
-&#125;</code></pre>
+&#125;</code></pre></div>
 <p>报错：</p>
-<pre><code>[[FATAL] Method public com.baobaodz.example.dropwizard.api.Book com.baobaodz.example.dropwizard.resources.HolaRestResource.saveSingleBook(javax.servlet.http.HttpServletRequest,com.baobaodz.example.dropwizard.api.Book) on resource class com.baobaodz.example.dropwizard.resources.HolaRestResource contains multiple parameters with no annotation. Unable to resolve the injection source.; 
+<div class="hljs code-wrapper"><pre><code>[[FATAL] Method public com.baobaodz.example.dropwizard.api.Book com.baobaodz.example.dropwizard.resources.HolaRestResource.saveSingleBook(javax.servlet.http.HttpServletRequest,com.baobaodz.example.dropwizard.api.Book) on resource class com.baobaodz.example.dropwizard.resources.HolaRestResource contains multiple parameters with no annotation. Unable to resolve the injection source.; 
 .......
-io.dropwizard.jersey.setup.JerseyServletContainer-38aafb53@4297147d==io.dropwizard.jersey.setup.JerseyServletContainer,jsp=null,order=1,inst=false</code></pre>
+io.dropwizard.jersey.setup.JerseyServletContainer-38aafb53@4297147d==io.dropwizard.jersey.setup.JerseyServletContainer,jsp=null,order=1,inst=false</code></pre></div>
 <p>注意这一句</p>
 <p><code>HolaRestResource contains multiple parameters with no annotation. Unable to resolve the injection source.</code></p>
 <p>大意就是<code>HolaRestResource</code>里包含了多个未被注解的参数</p>
