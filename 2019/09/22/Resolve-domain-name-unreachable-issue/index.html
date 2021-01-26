@@ -220,7 +220,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      616 字
+      606 字
     </span>
   
 
@@ -263,48 +263,19 @@
             <h1 style="display: none">解决域名无法访问的问题</h1>
             
             <div class="markdown-body">
-              <h4 id="解决域名无法访问的问题">解决域名无法访问的问题</h4>
-<p>最近有空整理我之前写的网站，发现可以通过ip+项目地址访问网站，如http://101.132.116.203:8080/MyBlog/    但是通过域名访问不了。<img src="https://s2.ax1x.com/2019/09/28/uQNqKI.png" srcset="/img/loading.gif" alt="拒绝请求"></p>
-<p>可以ping通域名。服务器防火墙已关闭。安全组也配置了端口开放 。在阿里云上进行检测。<img src="https://s2.ax1x.com/2019/09/28/uQNjVf.png" srcset="/img/loading.gif" alt="检测"></p>
-<p>查看80端口是否处于监听状态。发现并没有。一开始我以为是服务器防火墙需要放行80端口，搜了一堆怎么开放80端口的，不行。<img src="https://s2.ax1x.com/2019/09/28/uQNLrt.png" srcset="/img/loading.gif" alt="端口监听"></p>
-<p>提工单阿里云技术人员说我是用8080端口服务的，用域名自然是访问不了的。需要域名+8080端口才能访问，一试还真可以。但是我想还需要用80端口访问。于是进入修改/root/java/tomcat/apache-tomcat-8.5.34/conf目录下的sever.xml文件，启动80端口监听。</p>
-<div class="hljs code-wrapper"><pre><code class="language-xml">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
-           connectionTimeout=&quot;20000&quot;
-           redirectPort=&quot;8443&quot; /&gt;
-改为
-&lt;Connector port=&quot;80&quot; protocol=&quot;HTTP/1.1&quot;
-           connectionTimeout=&quot;20000&quot;
-           redirectPort=&quot;8443&quot; /&gt;
-</code></pre></div>
+              <p>解决域名无法访问的问题<br>最近有空整理我之前写的网站，发现可以通过ip+项目地址访问网站，如<a target="_blank" rel="noopener" href="http://101.132.116.203:8080/MyBlog/">http://101.132.116.203:8080/MyBlog/</a>    但是通过域名访问不了。<img src="https://s2.ax1x.com/2019/09/28/uQNqKI.png" srcset="/img/loading.gif" alt="拒绝请求"><br>可以ping通域名。服务器防火墙已关闭。安全组也配置了端口开放 。在阿里云上进行检测。</p>
+<img src="https://s2.ax1x.com/2019/09/28/uQNjVf.png" srcset="/img/loading.gif" alt="检测">
+查看80端口是否处于监听状态。发现并没有。一开始我以为是服务器防火墙需要放行80端口，搜了一堆怎么开放80端口的，不行。<img src="https://s2.ax1x.com/2019/09/28/uQNLrt.png" srcset="/img/loading.gif" alt="端口监听">
+
+<p>提工单阿里云技术人员说我是用8080端口服务的，用域名自然是访问不了的。需要域名+8080端口才能访问，一试还真可以。但是我想还需要用80端口访问。于是进入修改/root/java/tomcat/apache-tomcat-8.5.34/conf目录下的sever.xml文件，启动80端口监听。<br>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;<br>           connectionTimeout=&quot;20000&quot;<br>           redirectPort=&quot;8443&quot; /&gt;<br>改为<br>&lt;Connector port=&quot;80&quot; protocol=&quot;HTTP/1.1&quot;<br>           connectionTimeout=&quot;20000&quot;<br>           redirectPort=&quot;8443&quot; /&gt;</p>
 <p>查看端口监听,可以看到8080端口没有了，出现了80端口监听。</p>
-<div class="hljs code-wrapper"><pre><code class="language-shell">[root@izuf66fm097gavs15ngjfvz bin]# netstat -an | grep 80
-tcp        0      0 0.0.0.0:8009            0.0.0.0:*               LISTEN     
-tcp        4      0 0.0.0.0:80              0.0.0.0:*               LISTEN     
-tcp        1      0 172.19.93.164:80        180.111.33.207:11809    CLOSE_WAIT 
-tcp        0      0 172.19.93.164:26252     100.100.30.26:80        ESTABLISHED
-tcp        0     52 172.19.93.164:22        180.111.33.207:11847    ESTABLISHED
-tcp        0      0 172.19.93.164:80        180.111.33.207:11834    ESTABLISHED
-tcp        0      0 172.19.93.164:1521      101.132.116.203:46580   ESTABLISHED
-tcp      527      0 172.19.93.164:80        180.111.33.207:11833    ESTABLISHED
-tcp      553      0 172.19.93.164:80        180.111.33.207:11808    ESTABLISHED
-tcp        0      0 172.19.93.164:22        180.111.33.207:9649     ESTABLISHED
-</code></pre></div>
+<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz bin]# netstat -an | grep 80<br>tcp        0      0 0.0.0.0:8009            0.0.0.0:*               LISTEN     <br>tcp        4      0 0.0.0.0:80              0.0.0.0:*               LISTEN     <br>tcp        1      0 172.19.93.164:80        180.111.33.207:11809    CLOSE_WAIT <br>tcp        0      0 172.19.93.164:26252     100.100.30.26:80        ESTABLISHED<br>tcp        0     52 172.19.93.164:22        180.111.33.207:11847    ESTABLISHED<br>tcp        0      0 172.19.93.164:80        180.111.33.207:11834    ESTABLISHED<br>tcp        0      0 172.19.93.164:1521      101.132.116.203:46580   ESTABLISHED<br>tcp      527      0 172.19.93.164:80        180.111.33.207:11833    ESTABLISHED<br>tcp      553      0 172.19.93.164:80        180.111.33.207:11808    ESTABLISHED<br>tcp        0      0 172.19.93.164:22        180.111.33.207:9649     ESTABLISHED<br></code></pre></div></td></tr></table></figure>
 <p>重启Tomcat。这里我又犯了一个错误。我直接启动tomcat，要知道Tomcat本来就运行着的，这样一点用也没有。</p>
-<div class="hljs code-wrapper"><pre><code class="language-shell">[root@izuf66fm097gavs15ngjfvz bin]# cd /root/java/tomcat/apache-tomcat-8.5.34/bin
-[root@izuf66fm097gavs15ngjfvz bin]# ./satrtup.sh
-</code></pre></div>
+<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz bin]# cd /root/java/tomcat/apache-tomcat-8.5.34/bin<br>[root@izuf66fm097gavs15ngjfvz bin]# ./satrtup.sh<br></code></pre></div></td></tr></table></figure>
 <p>正确做法应该先关闭Tomcat，再启动。</p>
-<div class="hljs code-wrapper"><pre><code class="language-shell">[root@izuf66fm097gavs15ngjfvz bin]# cd /root/java/tomcat/apache-tomcat-8.5.34/bin
-[root@izuf66fm097gavs15ngjfvz bin]# ./shutdown.sh
-[root@izuf66fm097gavs15ngjfvz bin]# ./startup.sh
-Using CATALINA_BASE:   /root/java/tomcat/apache-tomcat-8.5.34
-Using CATALINA_HOME:   /root/java/tomcat/apache-tomcat-8.5.34
-Using CATALINA_TMPDIR: /root/java/tomcat/apache-tomcat-8.5.34/temp
-Using JRE_HOME:        /root/java/jdk/jdk1.8.0_181/jre
-Using CLASSPATH:       /root/java/tomcat/apache-tomcat-8.5.34/bin/bootstrap.jar:/root/java/tomcat/apache-tomcat-8.5.34/bin/tomcat-juli.jar
-Tomcat started.
-</code></pre></div>
+<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">[root@izuf66fm097gavs15ngjfvz bin]# cd /root/java/tomcat/apache-tomcat-8.5.34/bin<br>[root@izuf66fm097gavs15ngjfvz bin]# ./shutdown.sh<br>[root@izuf66fm097gavs15ngjfvz bin]# ./startup.sh<br>Using CATALINA_BASE:   /root/java/tomcat/apache-tomcat-8.5.34<br>Using CATALINA_HOME:   /root/java/tomcat/apache-tomcat-8.5.34<br>Using CATALINA_TMPDIR: /root/java/tomcat/apache-tomcat-8.5.34/temp<br>Using JRE_HOME:        /root/java/jdk/jdk1.8.0_181/jre<br>Using CLASSPATH:       /root/java/tomcat/apache-tomcat-8.5.34/bin/bootstrap.jar:/root/java/tomcat/apache-tomcat-8.5.34/bin/tomcat-juli.jar<br>Tomcat started.<br></code></pre></div></td></tr></table></figure>
 <p>访问baobaodz.com就可以访问了。</p>
+
             </div>
             <hr>
             <div>
@@ -337,8 +308,8 @@ Tomcat started.
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/01/25/about/">
-                        <span class="hidden-mobile">关于</span>
+                      <a href="/2018/11/16/Niuyun-Storage-CNAME-Configuration/">
+                        <span class="hidden-mobile">七牛云存储配置服务器CNAME</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
