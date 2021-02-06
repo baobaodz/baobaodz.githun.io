@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>【读书笔记】JavaScript高级程序设计-第三章</title>
+    <link href="/2021/02/06/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%89%E7%AB%A0/"/>
+    <url>/2021/02/06/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>附上学习的思维导图</p><p><img src="https://s3.ax1x.com/2021/02/06/ytEzKH.png" alt="基本概念"></p><h2 id="补充阅读"><a href="#补充阅读" class="headerlink" title="补充阅读"></a>补充阅读</h2><p>语法篇</p><ul><li><a href="http://www.ruanyifeng.com/blog/2010/01/12_javascript_syntax_structures_you_should_not_use.html">12种不宜使用的Javascript语法</a></li></ul><p>数据类型篇</p><ul><li><a href="https://draveness.me/whys-the-design-floating-point-arithmetic/">为什么 0.1 + 0.2 = 0.300000004</a></li></ul><p>原始类型篇</p><ul><li><a href="https://www.zhangxinxu.com/wordpress/2018/04/known-es6-symbol-function/">简单了解ES6/ES2015 Symbol() 方法</a></li><li><a href="https://juejin.cn/post/6844903795797786632">JavaScript 中的表示任意精度的 BigInt</a></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>JavaScript</tag>
+      
+      <tag>读书笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【读书笔记】JavaScript高级程序设计</title>
     <link href="/2021/01/31/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
     <url>/2021/01/31/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
