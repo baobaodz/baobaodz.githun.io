@@ -8,7 +8,7 @@
     <link href="/2021/02/17/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
     <url>/2021/02/17/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E5%9B%9B%E7%AB%A0/</url>
     
-    <content type="html"><![CDATA[<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>附上本章学习的思维导图</p><p><img src="https://s3.ax1x.com/2021/02/17/y20VAA.png" alt="变量、作用域和内存问题"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p>附上本章学习的思维导图</p><p><img src="https://s3.ax1x.com/2021/02/17/y20VAA.png" alt="变量、作用域和内存问题"></p><h2 id="补充阅读"><a href="#补充阅读" class="headerlink" title="补充阅读"></a>补充阅读</h2><h3 id="基本类型和引用类型篇"><a href="#基本类型和引用类型篇" class="headerlink" title="基本类型和引用类型篇"></a>基本类型和引用类型篇</h3><ul><li><a href="https://learnku.com/articles/38192">JavaScript - 基本类型与引用类型值</a></li></ul><h3 id="执行环境及作用域篇"><a href="#执行环境及作用域篇" class="headerlink" title="执行环境及作用域篇"></a>执行环境及作用域篇</h3><ul><li><a href="https://suifengcool.github.io/2020/11/25/Javascript%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83/">Javascript执行环境及作用域</a></li><li><a href="https://www.xiaohuochai.site/JS/ECMA/scope/executionContextAndScope.html">深入理解javascript作用域系列第五篇——一张图理解执行环境和作用域</a></li></ul><h3 id="垃圾收集篇"><a href="#垃圾收集篇" class="headerlink" title="垃圾收集篇"></a>垃圾收集篇</h3><ul><li><a href="https://segmentfault.com/a/1190000018605776">前端面试：谈谈 JS 垃圾回收机制</a></li><li><a href="https://zhuanlan.zhihu.com/p/23992332">JavaScript 中的垃圾回收</a></li></ul>]]></content>
     
     
     
