@@ -220,7 +220,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      378 字
+      380 字
     </span>
   
 
@@ -263,7 +263,7 @@
             <h1 style="display: none">【Angular】一次升级node并卸载angular的记录</h1>
             
             <div class="markdown-body">
-              <p>ng -v报错</p>
+              <p><code>ng -v</code>报错</p>
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">baobaodz@DESKTOP-MN61DA5 MINGW64 /g/Dev<br>$ ng -v<br>Node.js version v11.0.0 detected.<br>The Angular CLI requires a minimum Node.js version of either v10.13 or v12.0.<br><br>Please update your Node.js version or visit https://nodejs.org/ <span class="hljs-keyword">for</span> additional instructions.<br></code></pre></div></td></tr></table></figure>
 <p>说<code>Angular CLI</code>需要的最小版本的<code>node.js</code>要么是<code>v10.13</code>要么是<code>v12.0</code>，咋滴，看不起<code>11</code>的啊？网上一看，哦原来</p>
 <blockquote>
@@ -272,11 +272,12 @@
 </blockquote>
 <p>好吧，想当初不知道为啥下了个不稳定版的。</p>
 <p><code>ok</code>那就升级呗。</p>
-<h3 id="升级node"><a href="#升级node" class="headerlink" title="升级node"></a>升级node</h3><p><code>windows</code>上升级node.js也很简单，但是稍不留意就容易被网上教程误导。得，我就被误导了。</p>
-<p>第一步：打开cmd查看之前的node版本安装的路径： where node<br>第二步：直接去官网下载你想要的版本，安装在上述路径中覆盖即可。<br>第三步： node -v 发现node版本更新到你想要的版本。</p>
+<h3 id="升级node"><a href="#升级node" class="headerlink" title="升级node"></a>升级node</h3><p><code>windows</code>上升级<code>node.js</code>也很简单，但是稍不留意就容易被网上教程误导。得，我就被误导了。</p>
+<p>正确走法</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs crmsh">第一步：打开cmd查看之前的<span class="hljs-keyword">node</span><span class="hljs-title">版本安装的路径： where</span> <span class="hljs-keyword">node</span><span class="hljs-title"></span><br><span class="hljs-title">第二步：直接去官网下载你想要的版本，安装在上述路径中覆盖即可。</span><br><span class="hljs-title">第三步： node</span> -v 发现<span class="hljs-keyword">node</span><span class="hljs-title">版本更新到你想要的版本。</span><br></code></pre></div></td></tr></table></figure>
 <p>因为之前配置过环境变量，所以就省去了配置环境变量的步骤。</p>
-<p>如果是windows，就别用什么 安装n模块，<code>npm install -g n --force</code>  n latest 最新版本/n stable最新的稳定版本 ，</p>
-<p>因为那玩意只对linux上有用！</p>
+<p>具体步骤可参考 </p>
+<p>如果是<code>windows</code>，就别用什么 安装n模块，<code>npm install -g n --force</code>  n latest 什么的 ，因为那玩意只对linux上有用！</p>
 <h3 id="卸载angular"><a href="#卸载angular" class="headerlink" title="卸载angular"></a>卸载angular</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">npm uninstall -g @angualr/cli<br><br>npm cache clean<br><br>在npm全局的node_modules中找到@angular文件夹删掉<br><br>找到node_modules上一级的目录中找到ng/ng.cmd<br></code></pre></div></td></tr></table></figure>
 <h3 id="安装angular"><a href="#安装angular" class="headerlink" title="安装angular"></a>安装angular</h3><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">npm install -g @angular/cli<br></code></pre></div></td></tr></table></figure>
 
@@ -293,7 +294,9 @@
                     
                       <a class="hover-with-bg" href="/tags/Angular/">Angular</a>
                     
-                      <a class="hover-with-bg" href="/tags/node%EF%BC%8C%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">node，问题记录</a>
+                      <a class="hover-with-bg" href="/tags/node/">node</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">问题记录</a>
                     
                   </div>
                 
@@ -301,6 +304,23 @@
               
                 <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
               
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/02/17/%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E5%9B%9B%E7%AB%A0/">
+                        <span class="hidden-mobile">【读书笔记】JavaScript高级程序设计-第四章</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
