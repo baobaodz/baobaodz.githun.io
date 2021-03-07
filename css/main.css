@@ -302,7 +302,7 @@ sup > a::before,
 html,
 body {
   font-size: 16px;
-  font-family: Georgia, "Microsoft YaHei",sans, serif;
+  font-family: Georgia, "Microsoft YaHei",sans-serif;
 }
 html,
 body,
@@ -862,7 +862,7 @@ img[srcset] {
 .markdown-body {
   font-size: 1rem;
   margin-bottom: 2rem;
-  font-family: Georgia, "Microsoft YaHei",sans, serif;
+  font-family: Georgia, "Microsoft YaHei",sans-serif;
   color: var(--post-text-color);
 }
 .markdown-body h1,
